@@ -1,131 +1,44 @@
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body, wrapper {
+    min-height:100vh;
+    border: 2px solid black;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* want to use border-box for all elements */
-header {
-    background: linear-gradient(to right, #0000ff, #00ffff);
-    width: 100%;
-    height: 200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
+.navbar {
+    height: 18vh;
+    border-bottom: 10px solid black;
+    /* gradient dark blue to light blue background */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
     color: white;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    
-  }
-  
-/* want to use border-box to format the page */
-/* put the search bar and city buttons down the left side of the page below the header */
-/* put the weather forecast down the right side of the page below the header */
-/* want the forcast section to be a fixed width and the search bar and city buttons to be a fixed width */
-.weatherOutput {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 200px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  
-  button {
-      background-color: #808080;
-      color: #000000;
-      font-size: 20px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-weight: bold;
-      border-radius: 10px;
-      border-width: 2px;
-      border-color: #000000;
-      border-style: solid;
-      cursor: pointer;
-      outline: none;
-      transition: 0.5s;
-      width: 200px;
-      height: 50px;
-      margin: 10px;
-      padding: 10px;
+}
+
+.navbar-brand {
+    font-size: 3em;
+}
+
+@media screen and (max-width: 500px) 
+{
+    .navbar-brand {
+        font-size: 2em;
     }
-  
-  button:hover {
-      background-color: #000000;
-      color: #808080;
+    #city-list {
+        display:none;
     }
-  
-  .forecast {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 200px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  
-  .search-bar {
-      display: flex;
-      flex-direction: column;
-      justify-content: left;
-      align-items: left;
-      margin-top: 250px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      width: 200px;
-      height: 50px;
-    }
-  
-  .city-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    margin-top: 35px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #808080;
-    color: #000000;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    border-radius: 10px;
-    border-width: 2px;
-    border-color: #000000;
-    border-style: solid;
+}
+
+#city-list p:nth-of-type(1n+15) {
+    display: none;
+}
+
+#city-list {
     cursor: pointer;
-    outline: none;
-    transition: 0.5s;
-    width: 200px;
-    height: 50px;
-    margin: 10px;
-    padding: 10px;
-  }
-  
-  button:hover {
-    background-color: #000000;
-    color: #808080;
-  }
- 
-  
-  main {
-    margin-top: 250px;
-    margin-left: 250px;
-    width: 60%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
+}
+
+h3 {
+    padding: 2%;
+}
+
+
