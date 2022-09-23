@@ -13,6 +13,7 @@ body, wrapper {
     /* gradient dark blue to light blue background */
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
     color: white;
+    font-size: 120%;
 }
 
 .navbar-brand {
@@ -39,6 +40,7 @@ body, wrapper {
 
 h3 {
     padding: 2%;
+    font-size: 50px;
 }
 
 
